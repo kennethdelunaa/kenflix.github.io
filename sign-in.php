@@ -1,24 +1,30 @@
 <?php
 include ("connection.php");
+    session_start();
      //another way to connect
-
+    //  $email = $_SESSION['login-email'];
+    //  $password = $_SESSION['login-password'];
+    
+    //     $_SESSION['login-email'] = $email;
+    // $_SESSION['login-password'] = $password;
+    $_SESSION['email'] = $_POST['login-email'];
     //initalizations
     $email = $_POST['login-email'];
     $password = $_POST['login-password'];
    
-   if( ! filter_var($_POST['login-email'], FILTER_VALIDATE_EMAIL)){
+   if( ! filter_var($email, FILTER_VALIDATE_EMAIL)){
     die("Enter a valid email");
    }
 
-    if(strlen($_POST['login-password']) < 8){
+    if(strlen($password) < 8){
     die("Password must be at least 8 characters long.");
    }
 
-    if( ! preg_match("/[a-z]/i", $_POST['login-password'])){
+    if( ! preg_match("/[a-z]/i", $password)){
     die("Password must contain at least one letter.");
    }
 
-    if( ! preg_match("/[0-9]/", $_POST['login-password'])){
+    if( ! preg_match("/[0-9]/", $password)){
     die("Password must contain at least one number.");
    }
 
@@ -37,11 +43,11 @@ include ("connection.php");
                 die;
             }
         }
-        // echo "<script type='text/javascript'>  alert('wrong email or password') </script>";
+         echo "<script type='text/javascript'>  alert('wrong email or password') </script>";
         // echo '<script> $("#myModal1").show();</script>';
        }
        else {
-        // echo "<script type='text/javascript'>  alert('wrong email or password') </script>";
+         echo "<script type='text/javascript'>  alert('wrong email or password') </script>";
         // echo '<script> $("#myModal1").show();</script>';
        }
     }

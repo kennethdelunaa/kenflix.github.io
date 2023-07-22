@@ -1,6 +1,9 @@
 <?php 
     include ("connection.php");
     session_start();
+    $mail = $_SESSION['email'];
+    $query = "select * from registration where email = '$mail'";
+    $query_run = mysqli_query($conn, $query);
 ?>
 
 <!DOCTYPE html>
@@ -37,17 +40,24 @@
 <body oncontextmenu="return false">
 
 <!-- NAV -->
-    <div class="nav-wrapper">
+<div class="nav-wrapper">
       <div class="container" >
           <div class="nav">
             <a class="navbar-brand" href="loggedinTest.php" style="font-size: 40px; font-family: 'Bebas Neue', cursive; color: red">KENFLIX</a>
               <ul class="nav-menu" id="nav-menu">
-                  <li><a href="loggedinTest.php">Home</a></li>
-                  <li><a href="#movies">Movies</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li>
-                      <a href="test.php" class="btn btn-hover">
-                          <span>LOG OUT</span>
+                  <li><a href="loggedinTest.php#home">Home</a></li>
+                  <li><a href="loggedinTest.php#movies">Movies</a></li>
+                  <li><a href="loggedinTest.php#about">About</a></li>
+                  <li style="font-size: 1.25rem; font-weight: 700; cursor: context-menu;">HELLO 
+                  <?php 
+                  while($row = mysqli_fetch_array($query_run)){ 
+                    ?>
+                   <?php echo strtoupper('<span style="color: red; font-weight: 700; font-size: 1.25rem; margin-right: 15px;"> ' . $row['name'] . '<span>');?>
+                    <?php
+                  }
+                  ?></li>
+                      <a href="test.php" >
+                      <i class='pt-2 bx bx-log-out bx-sm'></i>
                       </a>
                   </li>
               </ul>

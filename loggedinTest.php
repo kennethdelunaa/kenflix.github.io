@@ -1,6 +1,14 @@
 <?php 
-    include ("connection.php");
+    include("connection.php");
     session_start();
+
+    // $email = $_SESSION['login-email'];
+    // $password = $_SESSION['login-password'];
+    // $_SESSION['login-password'] = $password; 
+    $mail = $_SESSION['email'];
+    $query = "select * from registration where email = '$mail'";
+    $query_run = mysqli_query($conn, $query);
+    
 ?>
 
 
@@ -37,7 +45,7 @@
 </head>
 <body oncontextmenu="return false">
 
-    <!-- NAV -->
+<!-- NAV -->
     <div class="nav-wrapper">
       <div class="container" >
           <div class="nav">
@@ -46,9 +54,16 @@
                   <li><a href="#home">Home</a></li>
                   <li><a href="#movies">Movies</a></li>
                   <li><a href="#about">About</a></li>
-                  <li>
-                      <a href="test.php" class="btn btn-hover">
-                          <span>LOG OUT</span>
+                  <li style="font-size: 1.25rem; font-weight: 700; cursor: context-menu;">HELLO 
+                  <?php 
+                  while($row = mysqli_fetch_array($query_run)){ 
+                    ?>
+                   <?php echo strtoupper('<span style="color: red; font-weight: 700; font-size: 1.25rem; margin-right: 15px;"> ' . $row['name'] . '<span>');?>
+                    <?php
+                  }
+                  ?></li>
+                      <a href="test.php" >
+                      <i class='pt-2 bx bx-log-out bx-sm'></i>
                       </a>
                   </li>
               </ul>
@@ -59,7 +74,7 @@
           </div>
       </div>
   </div>
-  <!-- END NAV -->
+<!-- END NAV -->
     <!-- FRONT MOVIE -->
     <div class="hero-section" id="home">
       <div class="hero-slide-item" id="front">
@@ -650,7 +665,7 @@
           </div>
         </div>
       </div>
-      <!-- END TRENDS MOVIES -->
+<!-- END TRENDS MOVIES -->
       
 <!-- TOP RATED MOVIES -->
 <div class="section">

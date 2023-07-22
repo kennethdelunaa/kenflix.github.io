@@ -1,9 +1,6 @@
 <?php 
     include ("connection.php");
-    session_start();
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +19,7 @@
     <div class="container-form">
 
         <!-- LOG IN/ SIGN IN FORM -->
-        <form action="sign-in.php" method="post" class="login active" autocomplete="off">
+        <form action="sign-in.php" method="POST" class="login active" autocomplete="off">
             <h1 class="title">Sign In</h1>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -46,7 +43,7 @@
         <!-- END LOG IN/ SIGN IN FORM -->
 
             <!-- REGISTER ACCOUNT FORM -->
-        <form action="register-db.php" method="post" class="register">
+        <form action="register-db.php" method="POST" class="register">
             <h1 class="title">Register your Account</h1>
             <div class="form-group">
                 <label for="email">Name</label>
