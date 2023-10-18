@@ -109,7 +109,7 @@
           </div>
           <div class="movie-slide carousel-nav-center owl-carousel">
           <!-- MOVIE ITEM -->
-            <a href="movie.php" class="movie-item">
+            <a href="movie.php?v=evil-dead-rise" class="movie-item">
               <img src="edr.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -136,7 +136,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=guardians-of-the-galaxy-vol-3" class="movie-item">
               <img src="gog.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -163,7 +163,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=dungeon-and-dragons-honor-among-thieves" class="movie-item">
               <img src="dd.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -190,7 +190,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=super-mario-bros" class="movie-item">
               <img src="mario.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -217,7 +217,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=the-popes-exorcist" class="movie-item">
               <img src="pe.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -244,7 +244,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=ant-man-and-the-wasp" class="movie-item">
               <img src="antman.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -271,7 +271,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=air" class="movie-item">
               <img src="air.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -298,7 +298,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=the-mother" class="movie-item">
               <img src="mother.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -325,7 +325,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=the-convenant" class="movie-item">
               <img src="tc.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -352,7 +352,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=scream-6" class="movie-item">
               <img src="scream.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -379,7 +379,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=renfield" class="movie-item">
               <img src="ren.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -406,7 +406,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=peter-pan-and-wendy" class="movie-item">
               <img src="peterpan.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -433,7 +433,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=crater" class="movie-item">
               <img src="crater.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -460,7 +460,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=avatar-the-way-of-water" class="movie-item">
               <img src="avatar.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -487,7 +487,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=ghosted" class="movie-item">
               <img src="ghosted.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -514,7 +514,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=john-wick-chapter-4" class="movie-item">
               <img src="johnwick.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -541,7 +541,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=shazam-fury-of-the-gods" class="movie-item">
               <img src="shazam.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -568,7 +568,7 @@
             <!-- END MOVIE ITEM -->
 
              <!-- MOVIE ITEM -->
-             <a href="#" class="movie-item">
+             <a href="movie.php?v=fast-x" class="movie-item">
               <img src="fast10.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -595,7 +595,7 @@
             <!-- END MOVIE ITEM -->
 
              <!-- MOVIE ITEM -->
-             <a href="#" class="movie-item">
+             <a href="movie.php?v=simulant" class="movie-item">
               <img src="simulant.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -622,7 +622,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="#" class="movie-item">
+            <a href="movie.php?v=aka" class="movie-item">
               <img src="aka.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -1755,8 +1755,8 @@
 <!-- END SPECIAL MOVIE SECTION -->
 
 <!-- PRICING SECTION -->
-  <div class="section">
-    <div class="container" id="pricing-container">
+  <div class="section" id="pricing-container">
+    <div class="container">
       <div class="pricing">
         <div class="pricing-header">
           <a class="navbar-brand" href="#" style="cursor: context-menu; font-size: 50px; font-family: 'Bebas Neue', cursive; color: red">KENFLIX</a><a href="#" style="cursor: context-menu; font-size: 50px; font-family: 'Bebas Neue', cursive; color: white;">PRICING</a>
@@ -1868,9 +1868,9 @@
             <div class="content">
               <p><b>Kenflix</b></p>
               <ul class="footer-menu">
-                <li id="footer-items"><a href="#">About Us</a></li>
+                <li id="footer-items"><a href="#about">About Us</a></li>
                 <li id="footer-items"><a href="#">My Profile</a></li>
-                <li id="footer-items"><a href="#">Pricing Plans</a></li>
+                <li id="footer-items"><a href="#pricing-container">Pricing Plans</a></li>
                 <li id="footer-items"><a href="#">Contacts</a></li>
               </ul>
             </div>
@@ -1880,9 +1880,9 @@
               <div class="content">
                 <p><b>Help</b></p>
                 <ul class="footer-menu">
-                  <li id="footer-items"><a href="#">About Us</a></li>
+                  <li id="footer-items"><a href="#about">About Us</a></li>
                   <li id="footer-items"><a href="#">My Profile</a></li>
-                  <li id="footer-items"><a href="#">Pricing Plans</a></li>
+                  <li id="footer-items"><a href="#pricing-container">Pricing Plans</a></li>
                   <li id="footer-items"><a href="#">Contacts</a></li>
                 </ul>
             </div>
