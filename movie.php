@@ -1,7 +1,7 @@
 <?php 
     include ("connection.php");
     session_start();
-    $movie = $_GET['v'];
+    $movie = $_GET['m'];
 
     $db = mysqli_select_db($conn, 'kenflix');
     $query = " SELECT * FROM `movie` WHERE `movie-name`= '$movie'";
@@ -63,53 +63,58 @@
   </div>
 <!-- END NAV -->
 
-<!-- FRONT MOVIE -->
+<!-- MOVIE DETAILS -->
 
-<?php 
-     while($row = mysqli_fetch_array($query_run)){
-    ?>
+    <?php 
+        while($row = mysqli_fetch_array($query_run)){
+        ?>
 
-    <div class="hero-section" id="home">
-        <div class="hero-slide-item" id="front">
-        <img src="banner/<?=$row['movie-banner']?>" alt="Banner" style="width: 100%; height: 100%;">
-            <div class="hero-slide-item-content">
-                <div class="item-content-wraper">
-                </div>
-            </div>
-        </div>  
-    </div>
-
-    <div class="container-movie-info justify-content-center gap-5">
-        <div class="container-movie d-flex gap-4 justify-content-center">
-            <div class="movie-card"><img src="poster/<?=$row['movie-img']?>" alt="Image" style="width: 300px;"></div>
-                <div class="info">
-                    <div class="title"><h1><?php echo $row['movie-title'];?></h1></div>
-                        <p><?php echo $row['movie-desc'];?></p>
-                    <div class="movie-infos">
-                        <div class="movie-info">
-                        <i class="bx bxs-star" id="star"></i>
-                            <span><?php echo $row['movie-star'];?></span>
-                        </div>
-                        <div class="movie-info">
-                            <i class="bx bxs-time"></i>
-                            <span><?php echo $row['movie-dur'];?></span>
-                        </div>
-                        <div class="movie-info">
-                            <span><?php echo $row['movie-year'];?></span>
-                        </div>
-                        <div class="movie-info">
-                            <span><?php echo $row['movie-rate']?></span>
-                        </div>
+        <div class="hero-section" id="home">
+            <div class="hero-slide-item" id="front">
+            <img src="banner/<?=$row['movie-banner']?>" alt="Banner" style="width: 100%; height: 100%;">
+                <div class="hero-slide-item-content">
+                    <div class="item-content-wraper">
                     </div>
                 </div>
+            </div>  
         </div>
-     <?php
-            }
-                ?>
-                <?php 
-                     $query = "SELECT * FROM `casts` WHERE `movie-name`= '$movie'";
-                     $query_run = mysqli_query($conn, $query);
-                ?>
+
+        <div class="container-movie-info justify-content-center gap-5">
+            <div class="container-movie d-flex gap-4 justify-content-center">
+                <div class="movie-card"><img src="poster/<?=$row['movie-img']?>" alt="Image" style="width: 300px;"></div>
+                    <div class="info">
+                        <div class="title"><h1><?php echo $row['movie-title'];?></h1></div>
+                            <p><?php echo $row['movie-desc'];?></p>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                            <i class="bx bxs-star" id="star"></i>
+                                <span><?php echo $row['movie-star'];?></span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span><?php echo $row['movie-dur'];?></span>
+                            </div>
+                            <div class="movie-info">
+                            <i class='bx bx-calendar-alt'></i>
+                                <span><?php echo $row['movie-year'];?></span>
+                            </div>
+                            <div class="movie-info">
+                            <i class='bx bx-camera-movie'></i>
+                                <span><?php echo $row['movie-rate']?></span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        <?php
+                }
+                    ?>
+<!-- END MOVIE DETAILS -->
+
+<!-- CAST -->
+    <?php 
+        $query = "SELECT * FROM `casts` WHERE `movie-name`= '$movie'";
+        $query_run = mysqli_query($conn, $query);
+    ?>
         <div class="container-cast">
             <div class="cast-header">
                 <h1>Cast</h1>
@@ -135,19 +140,14 @@
                
         </div>
     </div>
-
-  <!-- CAST -->
-    
-  <!-- END CAST -->
-<!-- END FRONT MOVIE -->
-   
+<!-- END CAST -->
+ 
 <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-                    
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>             
 <!-- END SCRIPTS -->
 
 </body> 

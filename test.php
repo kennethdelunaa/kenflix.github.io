@@ -109,7 +109,7 @@
           </div>
           <div class="movie-slide carousel-nav-center owl-carousel">
           <!-- MOVIE ITEM -->
-            <a href="movie.php?v=evil-dead-rise" class="movie-item">
+            <a href="movie.php?m=evil-dead-rise" class="movie-item rounded">
               <img src="edr.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -136,7 +136,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=guardians-of-the-galaxy-vol-3" class="movie-item">
+            <a href="movie.php?v=guardians-of-the-galaxy-vol-3" class="movie-item rounded">
               <img src="gog.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -163,7 +163,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=dungeon-and-dragons-honor-among-thieves" class="movie-item">
+            <a href="movie.php?v=dungeon-and-dragons-honor-among-thieves" class="movie-item rounded">
               <img src="dd.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -190,7 +190,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=super-mario-bros" class="movie-item">
+            <a href="movie.php?v=super-mario-bros" class="movie-item rounded">
               <img src="mario.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -217,7 +217,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=the-popes-exorcist" class="movie-item">
+            <a href="movie.php?v=the-popes-exorcist" class="movie-item rounded">
               <img src="pe.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -244,7 +244,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=ant-man-and-the-wasp" class="movie-item">
+            <a href="movie.php?v=ant-man-and-the-wasp" class="movie-item rounded">
               <img src="antman.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -271,7 +271,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=air" class="movie-item">
+            <a href="movie.php?v=air" class="movie-item rounded">
               <img src="air.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -298,7 +298,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=the-mother" class="movie-item">
+            <a href="movie.php?v=the-mother" class="movie-item rounded">
               <img src="mother.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -325,7 +325,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=the-convenant" class="movie-item">
+            <a href="movie.php?v=the-convenant" class="movie-item rounded">
               <img src="tc.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -352,7 +352,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=scream-6" class="movie-item">
+            <a href="movie.php?v=scream-6" class="movie-item rounded">
               <img src="scream.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -379,7 +379,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=renfield" class="movie-item">
+            <a href="movie.php?v=renfield" class="movie-item rounded">
               <img src="ren.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -406,7 +406,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=peter-pan-and-wendy" class="movie-item">
+            <a href="movie.php?v=peter-pan-and-wendy" class="movie-item rounded">
               <img src="peterpan.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -433,7 +433,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=crater" class="movie-item">
+            <a href="movie.php?v=crater" class="movie-item rounded">
               <img src="crater.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -460,7 +460,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=avatar-the-way-of-water" class="movie-item">
+            <a href="movie.php?v=avatar-the-way-of-water" class="movie-item rounded">
               <img src="avatar.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -487,7 +487,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=ghosted" class="movie-item">
+            <a href="movie.php?v=ghosted" class="movie-item rounded">
               <img src="ghosted.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -514,7 +514,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=john-wick-chapter-4" class="movie-item">
+            <a href="movie.php?v=john-wick-chapter-4" class="movie-item rounded">
               <img src="johnwick.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -541,7 +541,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=shazam-fury-of-the-gods" class="movie-item">
+            <a href="movie.php?v=shazam-fury-of-the-gods" class="movie-item rounded">
               <img src="shazam.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -568,7 +568,7 @@
             <!-- END MOVIE ITEM -->
 
              <!-- MOVIE ITEM -->
-             <a href="movie.php?v=fast-x" class="movie-item">
+             <a href="movie.php?v=fast-x" class="movie-item rounded">
               <img src="fast10.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -595,7 +595,7 @@
             <!-- END MOVIE ITEM -->
 
              <!-- MOVIE ITEM -->
-             <a href="movie.php?v=simulant" class="movie-item">
+             <a href="movie.php?v=simulant" class="movie-item rounded">
               <img src="simulant.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -622,7 +622,7 @@
             <!-- END MOVIE ITEM -->
 
             <!-- MOVIE ITEM -->
-            <a href="movie.php?v=aka" class="movie-item">
+            <a href="movie.php?v=aka" class="movie-item rounded">
               <img src="aka.jpg" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
@@ -661,7 +661,7 @@
       <div class="movie-slide carousel-nav-center owl-carousel">
     
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="tsr.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -688,7 +688,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="tgf.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -715,7 +715,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="tgd2.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -742,7 +742,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="schi.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -769,7 +769,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="12.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -796,7 +796,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="spirited.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -823,7 +823,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="suzume.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -850,7 +850,7 @@
       <!-- END MOVIE ITEM -->
 
        <!-- MOVIE ITEM -->
-    <a href="#" class="movie-item">
+    <a href="#" class="movie-item rounded">
       <img src="chicago.jpg" alt="">
       <div class="movie-item-content">
         <div class="movie-item-title">
@@ -877,7 +877,7 @@
     <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="Athlete.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -915,7 +915,7 @@
     </div>
     <div class="movie-slide carousel-nav-center owl-carousel">
     <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="edr.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -942,7 +942,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="gog.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -969,7 +969,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="dd.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -996,7 +996,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="mario.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1023,7 +1023,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="pe.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1050,7 +1050,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="antman.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1077,7 +1077,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="air.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1104,7 +1104,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="mother.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1131,7 +1131,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="tc.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1158,7 +1158,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="scream.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1185,7 +1185,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="ren.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1212,7 +1212,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="peterpan.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1239,7 +1239,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="crater.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1266,7 +1266,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="avatar.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1293,7 +1293,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="ghosted.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1320,7 +1320,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="johnwick.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1347,7 +1347,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="shazam.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1374,7 +1374,7 @@
       <!-- END MOVIE ITEM -->
 
        <!-- MOVIE ITEM -->
-       <a href="#" class="movie-item">
+       <a href="#" class="movie-item rounded">
         <img src="fast10.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1401,7 +1401,7 @@
       <!-- END MOVIE ITEM -->
 
        <!-- MOVIE ITEM -->
-       <a href="#" class="movie-item">
+       <a href="#" class="movie-item rounded">
         <img src="simulant.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1428,7 +1428,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="aka.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1467,7 +1467,7 @@
     <div class="movie-slide carousel-nav-center owl-carousel">
     
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="jujutsu.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1494,7 +1494,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="kimetsu.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1521,7 +1521,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="silent.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1548,7 +1548,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="fireworks.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1575,7 +1575,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="hero.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1602,7 +1602,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="spirited.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1629,7 +1629,7 @@
       <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="suzume.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1656,7 +1656,7 @@
       <!-- END MOVIE ITEM -->
 
        <!-- MOVIE ITEM -->
-    <a href="#" class="movie-item">
+    <a href="#" class="movie-item rounded">
       <img src="ponyo.jpg" alt="">
       <div class="movie-item-content">
         <div class="movie-item-title">
@@ -1683,7 +1683,7 @@
     <!-- END MOVIE ITEM -->
 
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item">
+      <a href="#" class="movie-item rounded">
         <img src="seven.jpg" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
@@ -1764,7 +1764,7 @@
         <div class="pricing-list">
           <div class="row">
           <div class="col-4 col-md-12 col-sm-12">
-            <div class="pricing-box" >
+            <div class="pricing-box rounded ">
               <div class="pricing-box-header">
                 <div class="pricing-name">
                   Basic
@@ -1787,7 +1787,7 @@
             </div>
           </div>
           <div class="col-4 col-md-12 col-sm-12">
-            <div class="pricing-box highlight">
+            <div class="pricing-box highlight rounded shadow">
               <div class="pricing-box-header">
                 <div class="pricing-name">
                   Premium
@@ -1810,7 +1810,7 @@
             </div>
           </div>
           <div class="col-4 col-md-12 col-sm-12">
-            <div class="pricing-box">
+            <div class="pricing-box rounded shadow">
               <div class="pricing-box-header">
                 <div class="pricing-name">
                   VIP
@@ -1840,9 +1840,9 @@
 <!-- END PRICING SECTION -->
 
 <!-- FOOTER SECTION -->
-  <footer class="section" id="about">
+  <footer class="section">
   <div class="container" id="footer-container">
-    <div class="row">
+    <div class="row" id="about">
       <div class="col-4 col-md-6 col-sm-12">
         <div class="content">
           <a class="navbar-brand" href="#" style="cursor: context-menu; font-size: 50px; font-family: 'Bebas Neue', cursive; color: red">KENFLIX</a>

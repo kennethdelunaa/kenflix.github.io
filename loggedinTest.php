@@ -58,7 +58,7 @@
                   <?php 
                   while($row = mysqli_fetch_array($query_run)){ 
                     ?>
-                   <?php echo strtoupper('<span style="color: red; font-weight: 700; font-size: 1.25rem; margin-right: 15px;"> ' . $row['name'] . '<span>');?>
+                   <?php echo strtoupper('<span style="font-weight: 700; font-size: 1.25rem; margin-right: 15px;"> ' . $row['name'] . '<span>');?>
                     <?php
                   }
                   ?></li>

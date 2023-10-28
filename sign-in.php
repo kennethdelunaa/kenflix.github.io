@@ -38,10 +38,15 @@ include ("connection.php");
         if($result && mysqli_num_rows($result) > 0){
             $user_data = mysqli_fetch_assoc($result);
 
-            if($user_data['password'] == $password){
+            if($user_data['type'] == 'admin'){
+                header("location: testt.php");
+                die;
+            }
+            else if($user_data['password'] == $password){
                 header("location: loggedinTest.php");
                 die;
             }
+            
         }
          echo "<script type='text/javascript'>  alert('wrong email or password') </script>";
         // echo '<script> $("#myModal1").show();</script>';
