@@ -3,7 +3,8 @@
 
     session_start();
     $mail = $_SESSION['email'];
-    $movie = $_POST['movieCast'];
+    $movie = $_GET['m'];
+    
     $query = "select * from registration where email = '$mail'";
     $query_run = mysqli_query($conn, $query);
 
@@ -124,8 +125,8 @@
                         <thead>
                             <tr>
                             <th>ID</th>
+                            <th>ACTOR PHOTO</th>
                             <th>ACTOR NAME</th>
-                            <th>PHOTO</th>
                             <th>CHARACTER NAME</th>
                             <th>ACTIONS</th>
                             </tr>
@@ -140,8 +141,8 @@
                                          ?>
                                          <tr>
                                             <td><?= $movies['id']?></td>
-                                            <td><?= $movies['cast-name']?></td>
                                             <td><img src="casts/<?=$movies['cast-image']?>" class="rounded" alt="Image" style="width: 100px; height: 150px;"></td>
+                                            <td><?= $movies['cast-name']?></td>
                                             <td><?= $movies['cast-char']?></td>
                                             <td class="col">
                                                 <form action="functions.php" class="m-2" method="POST">
@@ -169,7 +170,7 @@
 
 <!-- VIEW Modal -->
     <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModal" aria-hidden="true">
-        <div class="modal-dialog modal-lg ">
+        <div class="modal-dialog">
             <div class="modal-content bg-dark">
                 <div class="modal-header text-white">
                     <h1 class="modal-title fs-5 text-white" id="viewModal">CAST DETAILS</h1>
@@ -184,7 +185,7 @@
 
 <!-- EDIT Modal -->
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModal" aria-hidden="true">
-        <div class="modal-dialog modal-lg" >
+        <div class="modal-dialog" >
             <div class="modal-content bg-dark ">
                 <div class="modal-header text-white">
                     <h1 class="modal-title fs-5 text-white">EDIT CAST DETAILS</h1>

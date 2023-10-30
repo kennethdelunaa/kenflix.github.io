@@ -190,9 +190,8 @@
                                                     <a href="" type="submit" class="btn btn-success m-1 editBtn" value="edit" data-bs-toggle="modal" data-bs-target="#editModal" data-edit = '<?php echo $movies['movie-id']; ?>'><i class='bx bxs-edit icon align-middle' style="font-size:1.5rem;"></i></a>
                                                     <a href="" type="submit" class="btn btn-danger m-1 delBtn" data-bs-toggle="modal" data-bs-target="#delModal" data-del = '<?php echo $movies['movie-id']; ?>'><i class='bx bxs-trash-alt icon align-middle' style="font-size:1.5rem;"></i></a>
                                                 </form>
-                                                <form action="cast.php"  class="m-2 d-grid col-10" method="POST">
+                                                <form action="cast.php?m=<?php echo $movies['movie-name']?>"  class="m-2 d-grid col-10" method="POST">
                                                 <button type="submit" class="btn btn-success m-1 addCast" style="font-family: 'Roboto', sans-serif"><i class='bx bxs-user align-middle pe-2' style="font-size:1.8rem;"></i>VIEW CAST</button>
-                                                <input hidden type="text" class="form-control" name="movieCast" value="<?php echo $movies['movie-name'];?>">
                                                 </form>
                                             </td>
                                          </tr>

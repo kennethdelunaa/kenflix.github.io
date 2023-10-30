@@ -10,7 +10,8 @@
        <form action="functions.php" method="POST" enctype="multipart/form-data">
 
             <div class="mb-3">
-                <input hidden type="text" class="form-control" name="movieId" id="movieId" value="<?php echo $row['id'];?>">
+                <input hidden type="text" class="form-control" name="id" id="id" value="<?php echo $row['id'];?>">
+                <input hidden type="text" class="form-control" name="movieName" value="<?php echo $row['movie-name']?>">
             </div>
 
             <div class="mb-5">
@@ -19,7 +20,7 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary fw-bold" name="submit" value="cast-del">Proceed</button>
+                <button type="submit" class="btn btn-primary fw-bold" name="submit" value="cast-delete">Proceed</button>
             </div>
          
             <?php 

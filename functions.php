@@ -159,25 +159,76 @@
             $newCastName = uniqid() . "-" . $castFileName;
             move_uploaded_file($castTempName, 'casts/' . $newCastName);
 
-            $query = "INSERT INTO casts VALUES ('', '$movie_name','$name', '$char', '$newCastName')";
+            $query = "INSERT INTO casts VALUES ('', '$movie_name','$name', '$newCastName', '$char')";
             mysqli_query($conn, $query);
 
             echo"
-                <script> alert('Added Successfully'); document.location.href = 'cast.php'; </script>
+                <script> alert(' Cast added successfully'); document.location.href = 'cast.php?m=$movie_name'; </script>
             ";
         }
         else{
             echo"
-                <script> alert('Please fill all the required fields'); document.location.href = 'cast.php#addCastModal'; </script>
+                <script> alert('Please fill all the required fields'); document.location.href = 'cast.php?m=$movie_name'; </script>
             ";
         }
 
     }
     function cast_edit(){
         global $conn;
+
+        if(!empty($_POST['castName']) && !empty($_POST['castChar'])){
+            $id = $_POST['id'];
+            $name = $_POST['castName'];
+            $char = $_POST['castChar'];
+            $movie_name = $_POST['movieName'];
+            $oldCastImg = $_POST['castImage'];
+
+            //POSTER UPDATING
+            $castFileName = $_FILES['updatedCastImage']['name'];
+                $castTempName = $_FILES['updatedCastImage']['tmp_name'];
+
+            if($castFileName != "" ){
+
+                    if(file_exists("casts/".$_FILES['updatedCastImage']['name'])){
+                            echo "<script> alert('Cast photo already exist!'); document.location.href = 'cast.php?m=$movie_name'; </script>";
+                    }
+                    else{
+                        $updatedCastImg = uniqid() . "-" . $castFileName;
+                        move_uploaded_file($castTempName, 'casts/' . $updatedCastImg);
+                    }
+            }
+            else{
+                $updatedCastImg = $oldCastImg;
+            }
+
+            $query = "UPDATE `casts` SET `cast-name` = '$name', `cast-char` = '$char', `cast-image` = '$updatedCastImg' WHERE `id` = '$id'";
+            mysqli_query($conn, $query);
+            echo "
+                <script> alert('Cast details updated successfully!'); document.location.href = 'cast.php?m=$movie_name'; </script>
+            ";
+        }
+        else{
+            echo"
+                <script> alert('Please fill all the required fields'); document.location.href = 'cast.php?m=$movie_name'; </script>
+            ";
+        }
     }
     function cast_del(){
         global $conn;
+
+        if(isset($_POST['id'])){
+            $id = $_POST['id'];
+            $movie_name = $_POST['movieName'];
+
+            $sql = "DELETE FROM `casts` WHERE `id` = $id";
+            $result = mysqli_query($conn, $sql);
+    
+            //for resetting id
+            // mysqli_query($conn, "ALTER TABLE `casts` AUTO_INCREMENT = 0");
+            echo "
+                <script> alert('Cast deleted successfully!'); document.location.href = 'cast.php?m=$movie_name'; </script>
+            ";
+        }
     }
 ?>
 
