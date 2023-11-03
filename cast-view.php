@@ -8,7 +8,7 @@
     while( $row = mysqli_fetch_array($result) ){
         ?>
         <div class="container-movie">
-            <div class="cast-image"><img src="casts/<?=$row['cast-image']?>" alt="Image" class="rounded" style="width: 150px; height: 200px;"></div>
+            <div class="cast-image"><img src="casts/<?=$row['cast-image']?>" alt="Image" class="rounded" style="width: 140px; height: 200px;"></div>
                     <div class="cast-name"><h1><?php echo $row['cast-name'];?></h1></div>
                         <h5 class="pb-3 cast-char"><?php echo $row['cast-char'];?></h5>
             </div>         

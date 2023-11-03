@@ -39,8 +39,7 @@
               <li class="pt-3" style="font-size: 1.25rem; font-weight: 700; cursor: context-menu;">HELLO 
                   <?php 
                   while($row = mysqli_fetch_array($query_run)){ 
-                    ?>
-                   <?php echo strtoupper('<span style=" font-weight: 700; font-size: 1.25rem; margin-right: 15px;"> ' . $row['name'] . '<span>');?>
+                     echo strtoupper('<span style="font-weight: 700; font-size: 1.25rem; margin-right: 15px;"> ' . $row['name'] . '<span>');?>
                     <?php
                   }?>
                   <li><a href="login.php"><i class='bx bx-log-out fs-2 pt-3'></i></a></li>
@@ -80,7 +79,7 @@
                                             <label for="castImage" class="form-label">Upload Actor Photo</label>
                                     <div class=" d-flex col gap-2">
                                             <div class="col-4 mb-3">
-                                                <img class="preview_poster rounded" src="casts/movie-poster-preview.png" style="width: 150px; height: 200px;">
+                                                <img class="preview_poster rounded" src="casts/movie-poster-preview.png" style="width: 140px; height: 200px;">
                                             </div>
 
                                             <div class="col-8">
@@ -106,13 +105,21 @@
 <!-- End ADD Modal -->
 
 <!-- LIST -->
+
     <div class="container">
     <div class="row">
         <div class="col-mid-12">
             <div class="card">
                 <div class="card-header">
-                    <h4  class="fw-bold">CAST DETAILS
-                        <!-- Button trigger modal -->
+                <?php 
+                $query = "SELECT * FROM `movie` WHERE `movie-name` = '$movie'";
+                $query_run = mysqli_query($conn, $query);
+                  while($row = mysqli_fetch_array($query_run)){ 
+                    ?>
+                    <h4  class="fw-bold"><?php echo strtoupper($row['movie-title']); ?> CASTS DETAILS
+                    <?php
+                  }
+                  ?><!-- Button trigger modal -->
                         <button type="button" class="btn btn-secondary float-end " data-bs-toggle="modal" data-bs-target="#addCastModal">
                         ADD NEW CAST
                         </button>
@@ -121,14 +128,14 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-dark table-striped-columns rounded">
+                    <table class="table table-dark table-striped-columns">
                         <thead>
                             <tr>
                             <th>ID</th>
                             <th>ACTOR PHOTO</th>
                             <th>ACTOR NAME</th>
                             <th>CHARACTER NAME</th>
-                            <th>ACTIONS</th>
+                            <th style="width: 15rem;">ACTIONS</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -138,10 +145,10 @@
 
                                 if(mysqli_num_rows($query_run) > 0){
                                     foreach($query_run as $movies){
-                                         ?>
+                                            ?>
                                          <tr>
                                             <td><?= $movies['id']?></td>
-                                            <td><img src="casts/<?=$movies['cast-image']?>" class="rounded" alt="Image" style="width: 100px; height: 150px;"></td>
+                                            <td><img src="casts/<?=$movies['cast-image']?>" class="rounded" alt="Image" style="width: 75px; height: 100px;"></td>
                                             <td><?= $movies['cast-name']?></td>
                                             <td><?= $movies['cast-char']?></td>
                                             <td class="col">

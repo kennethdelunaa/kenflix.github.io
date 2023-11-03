@@ -128,15 +128,13 @@ a.movie-item:hover {
     color: unset;
 }
 #pricing-container{
-    padding-top: 50px;
-    padding-bottom: 200px;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
 }
 #footer-2ndcol{
     padding-top: 20px;
 }
-#footer-container{
-    padding-top: 100px;
-}
+
 .container{
     max-width: 1920px;
     padding: 0 40px;
@@ -382,7 +380,7 @@ h1{
 
 
 .section{
-    padding-top: 105px;
+    padding-top: 5rem;
 }
 
 .section-header{
@@ -557,6 +555,9 @@ footer .content {
 #footer-items{
     margin-bottom: .25rem;
 }
+
+
+
 /* RESPONSIVE */
 @media only screen and (max-width: 1280px){
     html{

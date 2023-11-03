@@ -15,7 +15,7 @@
             </div>
 
             <div class="mb-5">
-                <h5 style="font-family: 'Roboto', sans-serif;">Are you sure to delete this movie?</h5>
+                <h5 style="font-family: 'Roboto', sans-serif;">Are you sure to delete this cast?</h5>
             </div>
 
             <div class="modal-footer">

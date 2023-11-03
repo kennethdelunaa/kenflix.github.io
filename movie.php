@@ -1,9 +1,8 @@
 <?php 
     include ("connection.php");
     session_start();
-    $movie = $_GET['m'];
-
-    $db = mysqli_select_db($conn, 'kenflix');
+    $movie = mysqli_real_escape_string($conn, $_GET['v']);
+    
     $query = " SELECT * FROM `movie` WHERE `movie-name`= '$movie'";
     $query_run = mysqli_query($conn, $query);
 ?>
@@ -64,14 +63,12 @@
 <!-- END NAV -->
 
 <!-- MOVIE DETAILS -->
-
     <?php 
         while($row = mysqli_fetch_array($query_run)){
         ?>
-
         <div class="hero-section" id="home">
             <div class="hero-slide-item" id="front">
-            <img src="banner/<?=$row['movie-banner']?>" alt="Banner" style="width: 100%; height: 100%;">
+            <img src="banner/<?=$row['movie-banner']?>" alt="Banner" style="width: 100%;">
                 <div class="hero-slide-item-content">
                     <div class="item-content-wraper">
                     </div>
@@ -126,9 +123,8 @@
                 while($row = mysqli_fetch_array($query_run)){
                 ?>
             <div class="col">
-
                     <div class="card h-100">
-                    <?php echo '<img src="data:image;base64,'.base64_encode($row['cast-image']).'" alt="Image">'; ?>
+                    <img src="casts/<?php echo $row['cast-image']; ?>" alt="Image">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $row['cast-name'];?></h5>
                             <p class="card-text"><?php echo $row['cast-char'];?></p>

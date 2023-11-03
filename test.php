@@ -108,545 +108,45 @@
             Trends
           </div>
           <div class="movie-slide carousel-nav-center owl-carousel">
-          <!-- MOVIE ITEM -->
-            <a href="movie.php?m=evil-dead-rise" class="movie-item rounded">
-              <img src="edr.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Evil Dead Rise
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>7.2</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>1h 36m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-18</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
+          <!-- MOVIE ITEM --><?php 
+            $query = "SELECT * FROM movie LIMIT 10";
+            $query_run = mysqli_query($conn, $query);
 
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=guardians-of-the-galaxy-vol-3" class="movie-item rounded">
-              <img src="gog.jpg" alt="">
+            if(mysqli_num_rows($query_run) > 0){
+                foreach($query_run as $movies){
+                      ?>
+            <a href="movie.php?v=<?php echo $movies['movie-name'];?>" class="movie-item rounded">
+              <img src="poster/<?=$movies['movie-img'] ?>" alt="">
               <div class="movie-item-content">
                 <div class="movie-item-title">
-                  Guardians of the Galaxy Vol. 3
+                  <?php echo $movies['movie-title'];?>
                 </div>
                 <div class="movie-infos">
                   <div class="movie-info">
                     <i class="bx bxs-star" id="star"></i>
-                    <span id="star-span">8.2</span>
+                    <span><?php echo $movies['movie-star'];?></span>
                   </div>
                   <div class="movie-info">
                     <i class="bx bxs-time" id="time"></i>
-                    <span id="time-span">2h 30m</span>
+                    <span><?php echo $movies['movie-dur'];?></span>
                   </div> 
                   <div class="movie-info">
-                    <span>2023</span>
+                    <span><?php echo $movies['movie-year'];?></span>
                   </div> 
                   <div class="movie-info">
-                    <span>PG</span>
+                    <span><?php echo $movies['movie-rate'];?></span>
                   </div> 
                 </div>
               </div>
             </a>
             <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=dungeon-and-dragons-honor-among-thieves" class="movie-item rounded">
-              <img src="dd.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Dungeon & Dragons: Honor Among Thieves
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>7.4</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>2h 14m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>PG</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=super-mario-bros" class="movie-item rounded">
-              <img src="mario.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Super Mario Bros. Movie
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>7.5</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>1h 32m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>PG</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=the-popes-exorcist" class="movie-item rounded">
-              <img src="pe.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  The Pope's Exorcist
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>7.2</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>1h 43m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-13</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=ant-man-and-the-wasp" class="movie-item rounded">
-              <img src="antman.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Ant-Man and the Wasp: Quantumania
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>6.2</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>2h 4m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>PG</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=air" class="movie-item rounded">
-              <img src="air.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Air
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>7.6</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>2h 4m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2021</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>PG</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=the-mother" class="movie-item rounded">
-              <img src="mother.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  The Mother
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>5.6</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>1h 55m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-13</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=the-convenant" class="movie-item rounded">
-              <img src="tc.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  The Covenant
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>7.6</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>2h 3m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-13</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=scream-6" class="movie-item rounded">
-              <img src="scream.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Scream VI
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>6.7</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>2h 2m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-18</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=renfield" class="movie-item rounded">
-              <img src="ren.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Renfield
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>6.4</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>1h 33m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-16</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=peter-pan-and-wendy" class="movie-item rounded">
-              <img src="peterpan.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Peter Pan & Wendy
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>4.1</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>1h 46m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>PG</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=crater" class="movie-item rounded">
-              <img src="crater.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Crater
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>4.9</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>1h 45m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>PG</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=avatar-the-way-of-water" class="movie-item rounded">
-              <img src="avatar.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Avatar: The Way of Water
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>7.7</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>3h 12m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2022</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>PG</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=ghosted" class="movie-item rounded">
-              <img src="ghosted.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  Ghosted
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>5.8</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>1h 56m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-13</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=john-wick-chapter-4" class="movie-item rounded">
-              <img src="johnwick.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                  John Wick: Chapter 4
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>8.2</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>2h 49m</span>
-                  </div>
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-16</span>
-                  </div>  
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=shazam-fury-of-the-gods" class="movie-item rounded">
-              <img src="shazam.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                 Shazam Fury of the Gods
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>6.0</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>2h 10m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>PG</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-             <!-- MOVIE ITEM -->
-             <a href="movie.php?v=fast-x" class="movie-item rounded">
-              <img src="fast10.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                 Fast X
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>7.0</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>2h 21m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-13</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-             <!-- MOVIE ITEM -->
-             <a href="movie.php?v=simulant" class="movie-item rounded">
-              <img src="simulant.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                 Simulant
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>5.1</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>1h 35m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>PG</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
-
-            <!-- MOVIE ITEM -->
-            <a href="movie.php?v=aka" class="movie-item rounded">
-              <img src="aka.jpg" alt="">
-              <div class="movie-item-content">
-                <div class="movie-item-title">
-                 AKA
-                </div>
-                <div class="movie-infos">
-                  <div class="movie-info">
-                    <i class="bx bxs-star" id="star"></i>
-                    <span>6.7</span>
-                  </div>
-                  <div class="movie-info">
-                    <i class="bx bxs-time" id="time"></i>
-                    <span>2h 2m</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>2023</span>
-                  </div> 
-                  <div class="movie-info">
-                    <span>R-16</span>
-                  </div> 
-                </div>
-              </div>
-            </a>
-            <!-- END MOVIE ITEM -->
+            <?php 
+                }
+            }
+            else{
+                echo "<h5> No Record Found </h5>";
+            }
+        ?>
           </div>
         </div>
       </div>
@@ -659,803 +159,101 @@
       TOP RATED
       </div>
       <div class="movie-slide carousel-nav-center owl-carousel">
-    
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="tsr.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            The Shawshank Redemption
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span id="star-span">9.3</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span id="time-span">2h 22m</span>
-            </div> 
-            <div class="movie-info">
-              <span>1994</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
+      <?php 
+            $query = "SELECT * FROM movie WHERE `movie-star` >= '7.5' AND `movie-type` IS NULL ORDER BY `movie-star` DESC LIMIT 10";
+            
+            $query_run = mysqli_query($conn, $query);
 
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="tgf.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            The Godfather
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>9.2</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 55m</span>
-            </div> 
-            <div class="movie-info">
-              <span>1972</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-18</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="tgd2.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            The Godfather Part II
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>9.0</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>3h 22m</span>
-            </div> 
-            <div class="movie-info">
-              <span>1974</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-18</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="schi.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Schindler's List
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>9.0</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>3h 15m</span>
-            </div> 
-            <div class="movie-info">
-              <span>1993</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-18</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="12.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            12 Angry Man
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>9.0</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 36m</span>
-            </div> 
-            <div class="movie-info">
-              <span>1957</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="spirited.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Spirited Away
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>8.6</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 5m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2001</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="suzume.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Suzume
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.8</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 2m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2022</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-       <!-- MOVIE ITEM -->
-    <a href="#" class="movie-item rounded">
-      <img src="chicago.jpg" alt="">
-      <div class="movie-item-content">
-        <div class="movie-item-title">
-          The Trial of the Chicago 7
-        </div>
-        <div class="movie-infos">
-          <div class="movie-info">
-            <i class="bx bxs-star" id="star"></i>
-            <span>7.7</span>
-          </div>
-          <div class="movie-info">
-            <i class="bx bxs-time" id="time"></i>
-            <span>2h 9m</span>
-          </div> 
-          <div class="movie-info">
-            <span>2020</span>
-          </div> 
-          <div class="movie-info">
-            <span>R-16</span>
-          </div> 
-        </div>
-      </div>
-    </a>
-    <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="Athlete.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Athlete A
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.6</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 43m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2020</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
+            if(mysqli_num_rows($query_run) > 0){
+                foreach($query_run as $movies){
+                      ?>
+            <a href="movie.php?v=<?php echo $movies['movie-name'];?>" class="movie-item rounded">
+              <img src="poster/<?=$movies['movie-img'] ?>" alt="">
+              <div class="movie-item-content">
+                <div class="movie-item-title">
+                  <?php echo $movies['movie-title'];?>
+                </div>
+                <div class="movie-infos">
+                  <div class="movie-info">
+                    <i class="bx bxs-star" id="star"></i>
+                    <span><?php echo $movies['movie-star'];?></span>
+                  </div>
+                  <div class="movie-info">
+                    <i class="bx bxs-time" id="time"></i>
+                    <span><?php echo $movies['movie-dur'];?></span>
+                  </div> 
+                  <div class="movie-info">
+                    <span><?php echo $movies['movie-year'];?></span>
+                  </div> 
+                  <div class="movie-info">
+                    <span><?php echo $movies['movie-rate'];?></span>
+                  </div> 
+                </div>
+              </div>
+            </a>
+            <!-- END MOVIE ITEM -->
+            <?php 
+                }
+            }
+            else{
+                echo "<h5> No Record Found </h5>";
+            }
+        ?>
       </div>
     </div>
   </div>
 <!-- END TOP RATED MOVIES -->
 
 <!-- LATEST MOVIES -->
-  <div class="section">
-    <div class="container">
-    <div class="section-header">
-      Latest Movies
-    </div>
-    <div class="movie-slide carousel-nav-center owl-carousel">
-    <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="edr.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Evil Dead Rise
+  <div class="section" id="movies">
+        <div class="container">
+          <div class="section-header">
+            LATEST MOVIES
           </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.2</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 36m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-18</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
+          <div class="movie-slide carousel-nav-center owl-carousel">
+          <!-- MOVIE ITEM --><?php 
+            $query = "SELECT * FROM movie LIMIT 10";
+            $query_run = mysqli_query($conn, $query);
 
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="gog.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Guardians of the Galaxy Vol. 3
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span id="star-span">8.2</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span id="time-span">2h 30m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
+            if(mysqli_num_rows($query_run) > 0){
+                foreach($query_run as $movies){
+                      ?>
+            <a href="movie.php?v=<?php echo $movies['movie-name'];?>" class="movie-item rounded">
+              <img src="poster/<?=$movies['movie-img'] ?>" alt="">
+              <div class="movie-item-content">
+                <div class="movie-item-title">
+                  <?php echo $movies['movie-title'];?>
+                </div>
+                <div class="movie-infos">
+                  <div class="movie-info">
+                    <i class="bx bxs-star" id="star"></i>
+                    <span><?php echo $movies['movie-star'];?></span>
+                  </div>
+                  <div class="movie-info">
+                    <i class="bx bxs-time" id="time"></i>
+                    <span><?php echo $movies['movie-dur'];?></span>
+                  </div> 
+                  <div class="movie-info">
+                    <span><?php echo $movies['movie-year'];?></span>
+                  </div> 
+                  <div class="movie-info">
+                    <span><?php echo $movies['movie-rate'];?></span>
+                  </div> 
+                </div>
+              </div>
+            </a>
+            <!-- END MOVIE ITEM -->
 
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="dd.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Dungeon & Dragons: Honor Among Thieves
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.4</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 14m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
+            <?php 
+                }
+            }
+            else{
+                echo "<h5> No Record Found </h5>";
+            }
+        ?>
           </div>
         </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="mario.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Super Mario Bros. Movie
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.5</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 32m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="pe.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            The Pope's Exorcist
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.2</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 43m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="antman.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Ant-Man and the Wasp: Quantumania
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>6.2</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 4m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="air.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Air
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.6</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 4m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2021</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="mother.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            The Mother
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>5.6</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 55m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="tc.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            The Covenant
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.6</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 3m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="scream.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Scream VI
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>6.7</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 2m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-18</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="ren.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Renfield
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>6.4</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 33m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-16</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="peterpan.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Peter Pan & Wendy
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>4.1</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 46m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="crater.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Crater
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>4.9</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 45m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="avatar.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Avatar: The Way of Water
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.7</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>3h 12m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2022</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="ghosted.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Ghosted
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>5.8</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 56m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="johnwick.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            John Wick: Chapter 4
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>8.2</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 49m</span>
-            </div>
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-16</span>
-            </div>  
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="shazam.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-           Shazam Fury of the Gods
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>6.0</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 10m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-       <!-- MOVIE ITEM -->
-       <a href="#" class="movie-item rounded">
-        <img src="fast10.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-           Fast X
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.0</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 21m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-       <!-- MOVIE ITEM -->
-       <a href="#" class="movie-item rounded">
-        <img src="simulant.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-           Simulant
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>5.1</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 35m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="aka.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-           AKA
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>6.7</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 2m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2023</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-16</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-    </div>
-  </div>
-  </div>
+      </div>
 <!-- END LATEST MOVIES -->
 
 <!-- TOP ANIME MOVIES -->
@@ -1466,248 +264,46 @@
     </div>
     <div class="movie-slide carousel-nav-center owl-carousel">
     
+    <?php 
+            $query = "SELECT * FROM movie WHERE `movie-type` = 'anime' ORDER BY `movie-star` DESC LIMIT 10";
+            $query_run = mysqli_query($conn, $query);
+
+            if(mysqli_num_rows($query_run) > 0){
+                foreach($query_run as $movies){
+                      ?>
       <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="jujutsu.jpg" alt="">
+      <a href="movie.php?v=<?php echo $movies['movie-name']; ?>" class="movie-item rounded">
+        <img src="poster/<?= $movies['movie-img'] ?>" alt="">
         <div class="movie-item-content">
           <div class="movie-item-title">
-            Jujutsu Kaisen 0
+            <?php echo $movies['movie-title'];?>
           </div>
           <div class="movie-infos">
             <div class="movie-info">
               <i class="bx bxs-star" id="star"></i>
-              <span id="star-span">7.8</span>
+              <span id="star-span"><?php echo $movies['movie-star'];?></span>
             </div>
             <div class="movie-info">
               <i class="bx bxs-time" id="time"></i>
-              <span id="time-span">1h 45m</span>
+              <span id="time-span"><?php echo $movies['movie-dur'];?></span>
             </div> 
             <div class="movie-info">
-              <span>2021</span>
+              <span><?php echo $movies['movie-year'];?></span>
             </div> 
             <div class="movie-info">
-              <span>R-13</span>
+              <span><?php echo $movies['movie-rate'];?></span>
             </div> 
           </div>
         </div>
       </a>
       <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="kimetsu.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Demon Slayer The Movie: Mugen Train
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>8.2</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 57m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2020</span>
-            </div> 
-            <div class="movie-info">
-              <span>R-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="silent.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            A Silent Voice
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>8.9</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 9m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2016</span>
-            </div> 
-            <div class="movie-info">
-              <span>G</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="fireworks.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Fireworks
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>5.5</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 30m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2017</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="hero.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            My Hero Academia: World Heroes' Mission
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.1</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 45m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2021</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="spirited.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Spirited Away
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>8.6</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 5m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2001</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="suzume.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            Suzume
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.8</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>2h 2m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2022</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
-
-       <!-- MOVIE ITEM -->
-    <a href="#" class="movie-item rounded">
-      <img src="ponyo.jpg" alt="">
-      <div class="movie-item-content">
-        <div class="movie-item-title">
-          Ponyo
-        </div>
-        <div class="movie-infos">
-          <div class="movie-info">
-            <i class="bx bxs-star" id="star"></i>
-            <span>7.6</span>
-          </div>
-          <div class="movie-info">
-            <i class="bx bxs-time" id="time"></i>
-            <span>1h 51m</span>
-          </div> 
-          <div class="movie-info">
-            <span>2008</span>
-          </div> 
-          <div class="movie-info">
-            <span>G</span>
-          </div> 
-        </div>
-      </div>
-    </a>
-    <!-- END MOVIE ITEM -->
-
-      <!-- MOVIE ITEM -->
-      <a href="#" class="movie-item rounded">
-        <img src="seven.jpg" alt="">
-        <div class="movie-item-content">
-          <div class="movie-item-title">
-            The Seven Deadly Sins the Movie: Prisoners of the Sky
-          </div>
-          <div class="movie-infos">
-            <div class="movie-info">
-              <i class="bx bxs-star" id="star"></i>
-              <span>7.1</span>
-            </div>
-            <div class="movie-info">
-              <i class="bx bxs-time" id="time"></i>
-              <span>1h 39m</span>
-            </div> 
-            <div class="movie-info">
-              <span>2018</span>
-            </div> 
-            <div class="movie-info">
-              <span>PG-13</span>
-            </div> 
-          </div>
-        </div>
-      </a>
-      <!-- END MOVIE ITEM -->
+      <?php 
+                }
+            }
+            else{
+                echo "<h5> No Record Found </h5>";
+            }
+        ?>
     </div>
   </div>
   </div>
@@ -1842,10 +438,11 @@
 <!-- FOOTER SECTION -->
   <footer class="section">
   <div class="container" id="footer-container">
-    <div class="row" id="about">
+    <div class="row justify-content-center" id="about">
+
       <div class="col-4 col-md-6 col-sm-12">
         <div class="content">
-          <a class="navbar-brand" href="#" style="cursor: context-menu; font-size: 50px; font-family: 'Bebas Neue', cursive; color: red">KENFLIX</a>
+          <a class="navbar-brand" href="test.php" style="cursor: context-menu; font-size: 50px; font-family: 'Bebas Neue', cursive; color: red">KENFLIX</a>
         </div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse neque quod veniam fugiat. Iusto ipsa officiis fugiat iste minima error, facere dolorem rem, sapiente inventore magnam soluta voluptas dignissimos?
@@ -1862,9 +459,10 @@
           </a>
         </div>
       </div>
-      <div class="col-8 col-md-6 col-sm-12" id="footer-2ndcol">
-        <div class="row" >
-          <div class="col-3 col-md-6 col-sm-12">
+
+      <div class="col-4 col-md-6 col-sm-12 " id="footer-2ndcol">
+        <div class="row justify-content-center">
+          <div class="col-4 col-md-6 col-sm-12">
             <div class="content">
               <p><b>Kenflix</b></p>
               <ul class="footer-menu">
@@ -1876,18 +474,7 @@
             </div>
           </div>
 
-          <div class="col-3 col-md-6 col-sm-12">
-              <div class="content">
-                <p><b>Help</b></p>
-                <ul class="footer-menu">
-                  <li id="footer-items"><a href="#about">About Us</a></li>
-                  <li id="footer-items"><a href="#">My Profile</a></li>
-                  <li id="footer-items"><a href="#pricing-container">Pricing Plans</a></li>
-                  <li id="footer-items"><a href="#">Contacts</a></li>
-                </ul>
-            </div>
-          </div>
-          <div class="col-3 col-md-6 col-sm-12">
+          <div class="col-8 col-md-6 col-sm-12">
               <div class="content">
                 <p><b>Download App</b></p>
                 <ul class="footer-menu">

@@ -216,6 +216,7 @@ h1{
     font-size: 3.5rem;
     cursor: context-menu;
     font-family: 'Roboto', sans-serif;
+    max-width: 35rem;
 }
 
 

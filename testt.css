@@ -38,12 +38,23 @@ a{
 }
 
 .nav-wrapper {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 10;
     background-color: #000000;
+    position: sticky;
+}
+
+.card-header{
+    top: var(--nav-height);
+    position: sticky;
+    background-color: #000000;
+}
+
+thead{
+    top: 115px;
+    position: sticky;
 }
 
 .nav {
@@ -52,6 +63,7 @@ a{
     justify-content: space-between;
     color: var(--text-color);
     height: var(--nav-height);
+    padding-bottom: 4rem;
 }
 
 .nav a {
@@ -158,6 +170,7 @@ tr{
     font-weight: 700; 
 }
 
+
 .modal-title, .modal-body{
     color: #000000;
 }
@@ -200,3 +213,6 @@ button{
     font-family: 'Roboto', sans-serif;
 }
 
+textarea{
+    resize: none;
+}

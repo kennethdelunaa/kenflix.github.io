@@ -29,7 +29,7 @@
 <body oncontextmenu="return false">
 <!-- NAV -->
     <div class="nav-wrapper">
-      <div class="container" >
+      <div class="container">
           <div class="nav">
             <a class="navbar-brand" href="testt.php" style="font-size: 40px; font-family: 'Bebas Neue', cursive; color: red">KENFLIX</a>
               <ul class="nav-menu pt-2" id="nav-menu">
@@ -127,6 +127,18 @@
                                         <label for="movieDesc" class="form-label">Movie Descriptions</label>
                                         <textarea class="form-control" name="movieDesc" rows="3"></textarea>
                                     </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Movie Type</label>
+                                        <div class="form-check mb-3 col d-flex flex-row gap-2">
+                                            <input class="form-check-input" type="checkbox" value="anime" name="movieType">
+                                            <label class="form-check-label" for="movieType">
+                                                Anime Movie
+                                            </label>
+                                        </div>
+                                    </div>  
+
+                                    
                             </div>
                             <div class="modal-footer text-white">
                                 <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
@@ -160,7 +172,7 @@
                             <tr>
                             <th>ID</th>
                             <th>POSTER</th>
-                            <th>TITLE</th>
+                            <th style="width: 20rem;">TITLE</th>
                             <th>STAR RATING</th>
                             <th>DURATION</th>
                             <th>YEAR</th>
@@ -220,7 +232,9 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body view-modal text-white"></div>
-                <div class="text-white"></div>
+                <div class="modal-footer justify-content-center ">
+                <button type="button " class="btn btn-secondary font-weight-bold d-grid gap-2 col-6 mx-auto fw-bold" data-bs-dismiss="modal">Close</button>
+            </div>   
             </div>
         </div>
     </div>

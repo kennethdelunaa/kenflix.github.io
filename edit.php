@@ -78,7 +78,7 @@
                 <label for="updatedMovieDesc" class="form-label">Movie Descriptions</label>
                 <textarea class="form-control" rows="3" id="updatedMovieDesc" name="updatedMovieDesc"><?php echo $row['movie-desc'];?></textarea>
             </div>
-        
+    
             <!-- ACTIONS -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Close</button>

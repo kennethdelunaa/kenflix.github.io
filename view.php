@@ -44,9 +44,6 @@
                     </div>
                 </div>
         </div>
-            <div class="modal-footer justify-content-center ">
-                <button type="button " class="btn btn-secondary font-weight-bold d-grid gap-2 col-6 mx-auto fw-bold" data-bs-dismiss="modal">Close</button>
-            </div>   
             <?php 
     }
     ?>
